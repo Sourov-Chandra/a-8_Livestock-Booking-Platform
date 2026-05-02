@@ -77,10 +77,7 @@ const RegisterForm = () => {
           startContent={<FcGoogle className="w-5 h-5 drop-shadow-sm" />}
         >
           <span className="relative z-10">Continue with Google</span>
-          <span
-            className="absolute inset-0 bg-linear-to-r from-primary/5 via-transparent to-primary/5 
-                   opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          />
+          <span className="absolute inset-0 bg-linear-to-r from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </Button>
 
         <div className="flex items-center gap-3">
