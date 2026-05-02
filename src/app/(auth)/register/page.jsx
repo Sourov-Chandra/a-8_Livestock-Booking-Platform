@@ -1,6 +1,6 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-import { Check } from "@gravity-ui/icons";
+import { Check, Eye, EyeSlash } from "@gravity-ui/icons";
 import {
   Button,
   Description,
@@ -8,12 +8,14 @@ import {
   FieldGroup,
   Form,
   Input,
+  InputGroup,
   Label,
   TextField,
 } from "@heroui/react";
+import { useState } from "react";
 const Register = () => {
 
-
+  const [isVisible, setIsVisible] = useState(false);
    const onSubmit = async (e) => {
      e.preventDefault();
      const formData = new FormData(e.currentTarget);
@@ -27,9 +29,10 @@ const Register = () => {
        callbackURL: "/",
      });
      if (error) {
-       console.log("Form data fetching error:", error.message);
+       alert("Form data fetching error", error.message);
      } else {
        console.log("Success!", data);
+       alert("successfully registered", userData.name)
      }
    };
   return (
@@ -114,22 +117,40 @@ const Register = () => {
             isRequired
             minLength={8}
             name="password"
-            type="password"
+            className="w-full"
             validate={(value) => {
-              if (value.length < 8) {
+              if (value.length < 8)
                 return "Password must be at least 8 characters";
-              }
-              if (!/[A-Z]/.test(value)) {
+              if (!/[A-Z]/.test(value))
                 return "Password must contain at least one uppercase letter";
-              }
-              if (!/[0-9]/.test(value)) {
+              if (!/[0-9]/.test(value))
                 return "Password must contain at least one number";
-              }
               return null;
             }}
           >
             <Label>Password</Label>
-            <Input name="password" placeholder="Enter your password" />
+            <InputGroup>
+              <InputGroup.Input
+                type={isVisible ? "text" : "password"}
+                placeholder="Enter your password"
+              />
+              <InputGroup.Suffix className="pr-0">
+                <Button
+                  isIconOnly
+                  aria-label={isVisible ? "Hide password" : "Show password"}
+                  size="sm"
+                  variant="ghost"
+                  type="button"
+                  onPress={() => setIsVisible(!isVisible)}
+                >
+                  {isVisible ? (
+                    <Eye className="size-4" />
+                  ) : (
+                    <EyeSlash className="size-4" />
+                  )}
+                </Button>
+              </InputGroup.Suffix>
+            </InputGroup>
             <Description>
               Must be at least 8 characters with 1 uppercase and 1 number
             </Description>
