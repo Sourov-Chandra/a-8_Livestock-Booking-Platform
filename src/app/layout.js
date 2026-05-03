@@ -3,6 +3,7 @@ import "./globals.css";
 import AppNavbar from "@/component/sharedLayout/navbar/Navbar";
 import { ToastContainer } from "react-toastify";
 import Footer from "@/component/sharedLayout/footer/Footer";
+import "animate.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

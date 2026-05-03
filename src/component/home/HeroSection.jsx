@@ -1,9 +1,7 @@
-"use client";
-
 import Link from "next/link";
 import "animate.css";
 import Image from "next/image";
-import { IoLocationOutline } from "react-icons/io5";
+import { IoLocationOutline, IoPulse } from "react-icons/io5";
 import { FaPlus } from "react-icons/fa";
 import { PiCowThin } from "react-icons/pi";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -65,7 +63,7 @@ export default function HeroSection() {
                 Perfect
               </span>
               <span className="block text-4xl md:text-5xl text-white/60 font-normal">
-                Cattle <em className="text-green-400 not-italic">Animal</em>
+                Qurbani <em className="text-green-400 not-italic">Animal</em>
               </span>
             </h1>
 
@@ -84,7 +82,7 @@ export default function HeroSection() {
               </Link>
               <Link
                 href="/register"
-                className="inline-flex items-center gap-2 border border-white/20 text-white/75 font-semibold px-7 py-3 rounded-full hover:bg-white/10 hover:text-white transition-all"
+                className="inline-flex items-center gap-2 border bg-[#1a6b35] border-white/20 text-white/75 font-semibold px-7 py-3 rounded-full hover:bg-[#1a6b70] hover:text-white transition-all"
               >
                 Create Account
               </Link>
@@ -104,10 +102,8 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="animate__animated animate__fadeInRight animate__slow">
-
-            <div className="group relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md mb-3 hover:border-green-500/30 hover:bg-white/10 transition-all duration-300">
-
+          <div className="animate__animated animate__fadeInRight animate__slow ">
+            <div className="group relative rounded-2xl overflow-hidden border border-white/10  backdrop-blur-md mb-3 hover:border-green-500/30 hover:bg-white/10 transition-all duration-300 bg-[#1a6b35]">
               <div className="relative h-52 overflow-hidden">
                 <Image
                   src={featuredAnimal.image}
@@ -135,7 +131,7 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              <div className="p-5">
+              <div className="p-5 ">
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <span className="text-[11px] font-bold uppercase tracking-widest text-green-400 font-mono">
@@ -168,16 +164,16 @@ export default function HeroSection() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3 bg-[#1a6b35]">
               {miniAnimals.map((m) => (
                 <div
                   key={m.name}
-                  className="group flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3 hover:bg-green-500/10 hover:border-green-500/25 hover:-translate-y-0.5 transition-all cursor-pointer"
+                  className="group flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3 hover:bg-green-500/10 hover:border-green-500/25 hover:-translate-y-0.5 transition-all cursor-pointer "
                 >
                   <span className="text-2xl group-hover:scale-110 transition-transform">
                     {m.emoji}
                   </span>
-                  <div className="min-w-0">
+                  <div className="min-w-0 ">
                     <p className="text-white/85 text-sm font-semibold leading-tight truncate">
                       {m.name}
                     </p>

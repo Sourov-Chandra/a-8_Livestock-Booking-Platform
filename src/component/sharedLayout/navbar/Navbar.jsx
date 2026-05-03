@@ -10,8 +10,8 @@ export default function Navbar() {
         className="text-2xl font-extrabold tracking-wider flex items-center gap-2"
       >
         <h2>
-          <span className="text-gray-900">ANIMAL</span>
-          <span className="text-green-600 italic ml-1">deal</span>
+          <span className="text-[#064E3B]">Qurbani</span>
+          <span className="text-[#D4AF37] italic ml-1">Hat</span>
         </h2>
       </Link>
       <NavLinks />
