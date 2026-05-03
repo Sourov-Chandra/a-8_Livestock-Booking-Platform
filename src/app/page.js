@@ -8,6 +8,8 @@ export default function Home() {
     <div className="">
       <HeroSection />
       <FeaturedAnimals />
+      <SacrificeTips />
+      <TopBreeds />
     </div>
   );
 }
