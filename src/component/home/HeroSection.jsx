@@ -3,7 +3,7 @@
 import Link from "next/link";
 import "animate.css";
 import Image from "next/image";
-import { IoLocationOutline, IoPulse } from "react-icons/io5";
+import { IoLocationOutline } from "react-icons/io5";
 import { FaPlus } from "react-icons/fa";
 import { PiCowThin } from "react-icons/pi";
 import { FaArrowRightLong } from "react-icons/fa6";
