@@ -13,9 +13,11 @@ const MyProfilePage = async() => {
   }
 
   return (
-    <main className="min-h-[60vh] flex items-start justify-center bg-gray-50 px-4 pt-20">
-      <ProfileView user={session.user} />
-    </main>
+    <section className=" bg-gray-50">
+      <main className="min-h-[80vh] flex items-start justify-center px-4 pt-20">
+        <ProfileView user={session.user} />
+      </main>
+    </section>
   );
 }
 
