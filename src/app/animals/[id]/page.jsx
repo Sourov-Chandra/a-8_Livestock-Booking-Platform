@@ -16,6 +16,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { formatPrice, getAnimalById } from "@/lib/data";
+import BookingForm from "@/component/animal/BookingForm";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
@@ -239,6 +240,10 @@ const AnimalsDetailspage = async ({ params }) => {
                 <button className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-white hover:bg-gray-50 text-emerald-700 font-semibold rounded-xl border-2 border-emerald-200 transition-all">
                   <FaWhatsapp /> Chat on WhatsApp
                 </button>
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-gray-100">
+                <BookingForm animalName={animal.name} />
               </div>
             </div>
           </div>
