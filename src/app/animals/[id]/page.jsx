@@ -77,7 +77,18 @@ const AnimalsDetailspage = async ({ params }) => {
 
 
   return (
-    <section className="bg-linear-to-r from-[#9bbad0] to-[#6600FF]">
+    <section className="bg-linear-to-r from-[#a32a91] to-[#6600FF]">
+      <div
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          inset: 0,
+          opacity: 0.12,
+          pointerEvents: "none",
+          backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+          backgroundSize: "30px 30px",
+        }}
+      />
       <main className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <Link
@@ -105,7 +116,6 @@ const AnimalsDetailspage = async ({ params }) => {
 
               <span className="absolute top-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                 <span className="px-3 py-1.5 bg-black/40 backdrop-blur-sm text-white/90 text-xs rounded-full flex items-center gap-1">
-                 
                   <FaSearch />
                 </span>
               </span>
