@@ -10,13 +10,13 @@ import { IoMdHeart } from "react-icons/io";
 
 
 const featuredAnimal = {
-    name: "Brahman Cross Cow",
-    category: "Large Animal",
-    weight: 450,
-    location: "Savar, Dhaka",
-    price: "19,500",
-    image:
-        "https://ecdn.dhakatribune.net/contents/cache/images/640x359x1/uploads/media/2024/07/07/Brahman-829d632ac98a3ffe3f82671dc904c7a0.jpg",
+  name: "Brahman Cross Cow",
+  category: "Large Animal",
+  weight: 450,
+  location: "Savar, Dhaka",
+  price: "19,500",
+  image:
+    "https://i.ibb.co.com/gZdjsyxM/pexels-fatih-turan-63325184-8460407.jpg",
 };
 
 const miniAnimals = [

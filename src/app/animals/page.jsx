@@ -3,6 +3,12 @@ import SortFilter from "@/component/animal/Sortfilter";
 import { getAnimals } from "@/lib/data";
 import "animate.css";
 
+export const metadata = {
+  title: "QurbaniHat | All animals",
+  description:
+    "Browse healthy cows, goats & sheep from verified farms across Bangladesh — priced with fairness.",
+};
+
 function getSortedFilteredAnimals(animals, { type, sort }) {
   let result = [...animals];
 
