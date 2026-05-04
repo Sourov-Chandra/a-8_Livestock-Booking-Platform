@@ -1,17 +1,8 @@
 import { betterFetch } from "@better-fetch/fetch";
 import { NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 
-const privateRoutes = ["/animals/", "/my-profile", "/update-profile"];
-
-export default async function middleware(request) {
-  const pathname = request.nextUrl?.pathname;
-
-  if (!pathname) return NextResponse.next();
-
-  const isPrivate = privateRoutes.some((route) => pathname.startsWith(route));
-
-  if (!isPrivate) return NextResponse.next();
-
+export default async function middleware(NextRequest) {
   const { data: session } = await betterFetch("/api/auth/get-session", {
     baseURL: request.nextUrl.origin,
     headers: {
