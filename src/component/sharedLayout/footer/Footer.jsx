@@ -11,8 +11,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h2 className="text-white text-lg font-bold mb-2">
-              <span className="text-white">ANIMAL</span>
-              <span className="text-green-600 italic ml-1">deal</span>
+              <span className="text-[#532edb]">Qurbani</span>
+              <span className="text-[#D4AF37] italic ml-1">Hat</span>
             </h2>
             <p className="text-sm leading-relaxed">
               Your trusted online marketplace for healthy animals across
@@ -59,7 +59,7 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-3">Contact</h4>
             <ul className="space-y-2 text-sm">
               <li className="flex justify-left items-center gap-1.5">
-                <IoMail /> support@animaldeal.com
+                <IoMail /> support@qurbanihat.com
               </li>
               <li className="flex justify-left items-center gap-1.5">
                 <FaPhoneAlt /> +880 1700-000000

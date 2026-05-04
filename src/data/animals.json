@@ -10,7 +10,15 @@
     "location": "Bogura",
     "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural খাবার.",
     "image": "https://cdn.bdstall.com/product-image/giant_134387.jpg",
-    "category": "Large Animal"
+    "category": "Large Animal",
+    "details": {
+      "feeding": "Natural grass and homemade feed",
+      "healthStatus": "Vet checked, fully vaccinated",
+      "sellerInfo": {
+        "farmName": "Bogura Agro Farm",
+        "contact": "+8801712345678"
+      }
+    }
   },
   {
     "id": 2,
@@ -23,7 +31,15 @@
     "location": "Kushtia",
     "description": "Premium Sahiwal bull with excellent muscle build. Ideal for Qurbani and dairy purposes.",
     "image": "https://cdn.bdstall.com/product-image/giant_273901.jpg",
-    "category": "Large Animal"
+    "category": "Large Animal",
+    "details": {
+      "feeding": "Premium concentrate and green fodder",
+      "healthStatus": "Health certified, all vaccinations up to date",
+      "sellerInfo": {
+        "farmName": "Kushtia Cattle Farm",
+        "contact": "+8801823456789"
+      }
+    }
   },
   {
     "id": 3,
@@ -36,7 +52,15 @@
     "location": "Chattogram",
     "description": "Pure Black Bengal goat, known for tender meat. Perfect for small family Qurbani.",
     "image": "https://www.iaea.org/sites/default/files/2024-08/bengalgoats300x200.jpg",
-    "category": "Small Animal"
+    "category": "Small Animal",
+    "details": {
+      "feeding": "Natural grazing and supplemental feed",
+      "healthStatus": "Dewormed and vaccinated",
+      "sellerInfo": {
+        "farmName": "Chattogram Goat Farm",
+        "contact": "+8801934567890"
+      }
+    }
   },
   {
     "id": 4,
@@ -49,7 +73,15 @@
     "location": "Mymensingh",
     "description": "Large Jamunapari buck with distinctive long ears. High meat yield and healthy condition.",
     "image": "https://www.shutterstock.com/image-photo/jamuna-pari-goat-long-ears-260nw-1414703171.jpg",
-    "category": "Small Animal"
+    "category": "Small Animal",
+    "details": {
+      "feeding": "Balanced diet with grains and leaves",
+      "healthStatus": "Regular health checkups, vaccinated",
+      "sellerInfo": {
+        "farmName": "Mymensingh Livestock Farm",
+        "contact": "+8801645678901"
+      }
+    }
   },
   {
     "id": 5,
@@ -62,7 +94,15 @@
     "location": "Savar, Dhaka",
     "description": "Imported Brahman crossbreed with superior weight. Raised at Shah Agro Farm with premium feed.",
     "image": "https://ecdn.dhakatribune.net/contents/cache/images/640x359x1/uploads/media/2024/07/07/Brahman-829d632ac98a3ffe3f82671dc904c7a0.jpg",
-    "category": "Large Animal"
+    "category": "Large Animal",
+    "details": {
+      "feeding": "Premium imported feed and fresh grass",
+      "healthStatus": "Veterinary certified, complete vaccination record",
+      "sellerInfo": {
+        "farmName": "Shah Agro Farm",
+        "contact": "+8801756789012"
+      }
+    }
   },
   {
     "id": 6,
@@ -75,7 +115,15 @@
     "location": "Rajshahi",
     "description": "Healthy Dorset sheep, wool-free variety suitable for Qurbani. Gentle temperament and good health.",
     "image": "https://img.hobbyfarms.com/wp-content/uploads/22204101/Dorset-Sheep_robbinsbox-iStock-Thinkstock_CROPPED.jpg",
-    "category": "Small Animal"
+    "category": "Small Animal",
+    "details": {
+      "feeding": "Grass and grain mixture",
+      "healthStatus": "Healthy, vaccinated and dewormed",
+      "sellerInfo": {
+        "farmName": "Rajshahi Sheep Farm",
+        "contact": "+8801867890123"
+      }
+    }
   },
   {
     "id": 7,
@@ -88,7 +136,15 @@
     "location": "Gazipur",
     "description": "Young Friesian heifer from Aftab Bahumukhi Farm. Good dairy potential and healthy growth.",
     "image": "https://cdn.bdstall.com/product-image/giant_273678.jpg",
-    "category": "Large Animal"
+    "category": "Large Animal",
+    "details": {
+      "feeding": "Scientific feed formulation with silage",
+      "healthStatus": "Regular vet visits, all vaccines current",
+      "sellerInfo": {
+        "farmName": "Aftab Bahumukhi Farm",
+        "contact": "+8801978901234"
+      }
+    }
   },
   {
     "id": 8,
@@ -101,6 +157,14 @@
     "location": "Cumilla",
     "description": "Strong local deshi ram, naturally raised in open field. Economical choice for Qurbani.",
     "image": "https://www.shutterstock.com/shutterstock/videos/3724320791/thumb/1.jpg",
-    "category": "Small Animal"
+    "category": "Small Animal",
+    "details": {
+      "feeding": "Open field grazing with natural herbs",
+      "healthStatus": "Naturally healthy, basic vaccination done",
+      "sellerInfo": {
+        "farmName": "Cumilla Rural Farm",
+        "contact": "+8801689012345"
+      }
+    }
   }
 ]
