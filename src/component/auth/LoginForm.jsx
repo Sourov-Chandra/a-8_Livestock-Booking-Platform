@@ -12,6 +12,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
@@ -115,6 +116,15 @@ const LoginForm = () => {
               </Button>
             </div>
           </Form>
+          <p className="text-center text-sm text-default-500">
+            Don&apos;t have an account?{" "}
+            <Link
+              href="/register"
+              className="text-primary font-medium hover:underline"
+            >
+              Register
+            </Link>
+          </p>
         </div>
       </div>
     </div>

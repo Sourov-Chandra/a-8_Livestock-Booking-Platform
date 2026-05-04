@@ -32,7 +32,7 @@ const RegisterForm = () => {
       name: userData.name,
       email: userData.email,
       password: userData.password,
-      photoURL: userData.photoUrl,
+      image: userData.photoUrl,
       // callbackURL: "/",
     });
 

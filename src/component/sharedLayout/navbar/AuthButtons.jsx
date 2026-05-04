@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { signOut, useSession } from "@/lib/auth-client";
 
@@ -20,9 +21,30 @@ export default function AuthButtons() {
   if (data) {
     return (
       <div className="flex items-center gap-3">
-        <span className="text-sm text-gray-500">
-          Welcome, {data.user.name}
-        </span>
+        <Link
+          href="/my-profile"
+          className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+        >
+          <div className="w-8 h-8 rounded-full overflow-hidden border border-gray-200 bg-[#064E3B] flex items-center justify-center shrink-0">
+            {data.user.image ? (
+              <Image
+                src={data.user.image}
+                alt={data.user.name}
+                width={32}
+                height={32}
+                className="object-cover w-full h-full"
+              />
+            ) : (
+              <span className="text-white text-sm font-semibold">
+                {data.user.name?.[0]?.toUpperCase()}
+              </span>
+            )}
+          </div>
+          <span className="text-sm font-medium text-gray-700">
+            {data.user.name}
+          </span>
+        </Link>
+
         <button
           onClick={handleLogout}
           className="text-sm font-medium text-white bg-red-500 px-4 py-1.5 rounded-lg hover:bg-red-600 transition-colors"

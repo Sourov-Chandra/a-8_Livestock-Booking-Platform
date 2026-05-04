@@ -1,6 +1,7 @@
 import Link from "next/link";
 import NavLinks from "./NavLinks";
 import AuthButtons from "./AuthButtons";
+import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
   return (
@@ -14,8 +15,16 @@ export default function Navbar() {
           <span className="text-[#D4AF37] italic ml-1">Hat</span>
         </h2>
       </Link>
-      <NavLinks />
-      <AuthButtons />
+      <div className="hidden md:flex items-center gap-6">
+        <NavLinks />
+      </div>
+      <div className="hidden md:flex items-center gap-6">
+        <AuthButtons />
+      </div>
+
+      <div className="flex md:hidden gap-2 item-center ">
+        <MobileMenu />
+      </div>
     </nav>
   );
 }

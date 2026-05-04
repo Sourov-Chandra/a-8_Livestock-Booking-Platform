@@ -21,7 +21,6 @@ function getSortedFilteredAnimals(animals, { type, sort }) {
 const AllAnimalsPage = async ({ searchParams }) => {
   const animals = getAnimals();
 
-  console.log(animals);
 
   const { type = "All", sort = "" } = await searchParams;
 
