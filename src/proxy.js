@@ -3,8 +3,10 @@ import { NextResponse } from "next/server";
 
 const privateRoutes = ["/animals/", "/my-profile", "/update-profile"];
 
-const middleware = async(request) => {
-  const pathname = request.nextUrl.pathname;
+export default async function middleware(request) {
+  const pathname = request.nextUrl?.pathname;
+
+  if (!pathname) return NextResponse.next();
 
   const isPrivate = privateRoutes.some((route) => pathname.startsWith(route));
 
@@ -27,6 +29,3 @@ const middleware = async(request) => {
 export const config = {
   matcher: ["/animals/:path*", "/my-profile", "/update-profile"],
 };
-
-
-export default middleware
