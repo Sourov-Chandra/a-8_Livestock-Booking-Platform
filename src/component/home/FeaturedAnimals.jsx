@@ -5,6 +5,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { GoStopwatch } from "react-icons/go";
 import { IoLocationOutline } from "react-icons/io5";
 import ScrollAnimate from "@/component/home/ScrollAnimate";
+import ViewDetailsButton from "./ViewDetailsButton";
 
 const featured = getFeaturedAnimals();
 
@@ -101,12 +102,8 @@ export default function FeaturedAnimals() {
                           ৳ {animal.price}
                         </p>
                       </div>
-                      <Link
-                        href={`/animals/${animal.id}`}
-                        className="text-xs font-bold bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors"
-                      >
-                        View Details
-                      </Link>
+                      
+                      <ViewDetailsButton id={animal.id} />
                     </div>
                   </div>
                 </div>

@@ -1,12 +1,27 @@
+'use client'
+
 import Image from "next/image";
 import { FiMapPin } from "react-icons/fi";
 import { BsCalendar, BsTag } from "react-icons/bs";
 import { FaWeightHanging } from "react-icons/fa";
-import Link from "next/link";
 import { formatPrice } from "@/lib/data";
+import { useRouter } from "next/navigation";
+import { useSession } from "@/lib/auth-client";
+import { toast } from "react-toastify";
 
 
 const AnimalCard = ({ animal }) => {
+
+  const router = useRouter();
+  const { data } = useSession();
+
+  const handleViewDetails = () => {
+    if (!data) {
+      toast.error("Please log in to view animal details!");
+      return;
+    }
+    router.push(`/animals/${animal.id}`);
+  };
  
 
   return (
@@ -87,12 +102,13 @@ const AnimalCard = ({ animal }) => {
           {animal.description}
         </p>
 
-        <Link href={`/animals/${animal.id}`}>
-          <button className="w-full bg-linear-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-emerald-500/30 flex items-center justify-center gap-2">
-            <BsTag className="w-4 h-4" />
-            View Details
-          </button>
-        </Link>
+        <button
+          onClick={handleViewDetails}
+          className="w-full bg-linear-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-emerald-500/30 flex items-center justify-center gap-2"
+        >
+          <BsTag className="w-4 h-4" />
+          View Details
+        </button>
       </div>
 
       <div className="absolute top-0 right-0 w-20 h-20 bg-linear-to-bl from-emerald-100/50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
