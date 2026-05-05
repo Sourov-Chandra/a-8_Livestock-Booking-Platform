@@ -3,9 +3,11 @@ import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
 const client = new MongoClient(process.env.BETTER_DB_URI);
+await client.connect();
 const db = client.db("livestock-app");
 
 export const auth = betterAuth({
+  secret: process.env.BETTER_AUTH_SECRET,
   database: mongodbAdapter(db, {
     // Optional: if you don't provide a client, database transactions won't be enabled.
     client,
