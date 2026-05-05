@@ -7,6 +7,7 @@ await client.connect();
 const db = client.db("livestock-app");
 
 export const auth = betterAuth({
+  baseURL: process.env.BETTER_AUTH_URL,
   secret: process.env.BETTER_AUTH_SECRET,
   database: mongodbAdapter(db, {
     // Optional: if you don't provide a client, database transactions won't be enabled.
