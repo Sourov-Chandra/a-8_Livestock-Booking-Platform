@@ -15,6 +15,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { FcGoogle } from "react-icons/fc";
 
 const LoginForm = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,18 +24,27 @@ const LoginForm = () => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const userData = Object.fromEntries(formData.entries());
-    // console.log(data);
+
     const { data, error } = await authClient.signIn.email({
       email: userData.email,
       password: userData.password,
-       callbackURL: "/",
+      callbackURL: "/",
     });
+
     if (error) {
       toast.error(error.message || "Login failed");
     } else {
-       toast.success("Login successful");
+      toast.success("Login successful");
     }
   };
+
+  const handleGoogleSignIn = async () => {
+    const { data, error } = await authClient.signIn.social({
+      provider: "google",
+      callbackURL: "/",
+    });
+  };
+
   return (
     <div className="min-h-[80vh] bg-background">
       <div className="flex h-[80vh] items-center justify-center px-4">
@@ -44,6 +54,30 @@ const LoginForm = () => {
               Please login here
             </h2>
           </div>
+
+          {/* google */}
+          <Button
+            className="w-full h-12 font-medium relative overflow-hidden group
+             border border-default-200 hover:border-default-300
+             bg-linear-to-r from-white to-default-50/50
+             hover:from-default-50 hover:to-default-100/50
+             active:scale-[0.99] transition-all duration-200
+             shadow-sm hover:shadow-md"
+            onPress={handleGoogleSignIn}
+            startContent={<FcGoogle className="w-5 h-5 drop-shadow-sm" />}
+          >
+            <span className="relative z-10">Continue with Google</span>
+            <span className="absolute inset-0 bg-linear-to-r from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </Button>
+
+          <div className="flex items-center gap-3">
+            <div className="flex-1 h-px bg-divider" />
+            <span className="text-xs text-default-400">
+              or login with email
+            </span>
+            <div className="flex-1 h-px bg-divider" />
+          </div>
+
           <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
             {/* email */}
             <TextField

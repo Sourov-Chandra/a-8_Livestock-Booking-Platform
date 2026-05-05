@@ -18,6 +18,7 @@ const AnimalCard = ({ animal }) => {
   const handleViewDetails = () => {
     if (!data) {
       toast.error("Please log in to view animal details!");
+      // router.push("/login");
       return;
     }
     router.push(`/animals/${animal.id}`);
