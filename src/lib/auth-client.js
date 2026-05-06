@@ -1,7 +1,7 @@
 import { createAuthClient } from "better-auth/react";
 
 const authClient = createAuthClient({
-  baseURL: "https://a-8-livestock-booking-platform-ar5apevru.vercel.app",
+  baseURL: process.env.NEXT_PUBLIC_APP_URL,
 });
 
 export const { signIn, signUp, signOut, useSession } = authClient;
