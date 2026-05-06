@@ -8,9 +8,12 @@ import { formatPrice } from "@/lib/data";
 import { useRouter } from "next/navigation";
 import { useSession } from "@/lib/auth-client";
 import { toast } from "react-toastify";
+import { useState } from "react";
 
 
 const AnimalCard = ({ animal }) => {
+  
+  const [isLoading, setIsLoading] = useState(false);
 
   const router = useRouter();
   const { data } = useSession();
@@ -21,6 +24,7 @@ const AnimalCard = ({ animal }) => {
       // router.push("/login");
       return;
     }
+    setIsLoading(true)
     router.push(`/animals/${animal.id}`);
   };
  
@@ -105,10 +109,17 @@ const AnimalCard = ({ animal }) => {
 
         <button
           onClick={handleViewDetails}
+          disabled={isLoading}
           className="w-full bg-linear-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-emerald-500/30 flex items-center justify-center gap-2"
         >
-          <BsTag className="w-4 h-4" />
-          View Details
+          {isLoading ? (
+            <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+          ) : (
+            <>
+              <BsTag className="w-4 h-4" />
+              View Details
+            </>
+          )}
         </button>
       </div>
 
